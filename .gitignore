@@ -1,1 +1,4 @@
+# Needed since we mount the notebooks dir as a docker volume
 notebooks/.Trash-0/*
+notebooks/.ipynb_checkpoints/*
+test_data/.ipynb_checkpoints/*
