@@ -1,9 +1,9 @@
 # My Machine Learning Notes
 
 
-Building the container:
+Building the container (the `--network=host` is for working with vpn):
 ```
-docker image build -t machine_learning_notes .
+docker image build --network=host -t machine_learning_notes .
 ```
 
 Running the container:
