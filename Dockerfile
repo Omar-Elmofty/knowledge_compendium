@@ -5,9 +5,11 @@ FROM python:3.11
 WORKDIR /app
 
 # Install Jupyter Notebook
-COPY ./requirements.txt ./requirements.txt
+COPY . .
 
 RUN pip install -r requirements.txt
+
+RUN pip install -e .
 
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
