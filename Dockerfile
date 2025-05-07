@@ -7,7 +7,11 @@ WORKDIR /app
 # Install Jupyter Notebook
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
+
+# Installing pytorch (TODO: add it in requirements.txt)
+RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
 
 RUN pip install -e .
 

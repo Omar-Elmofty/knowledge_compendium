@@ -1,8 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import heapq
+import copy
 
-def create_data_instance(n, m, obstacle_p=0.2):
+def create_data_instance(n, m, obstacle_p=0.3):
     x = np.empty((3, n, m))
     zero_positions = np.array([])
     while len(zero_positions) == 0:
@@ -113,9 +114,9 @@ def get_direction(from_cell, to_cell):
     if dr == -1 and dc == 0:
         return 0 # up
     elif dr == 1 and dc == 0:
-        return 1 # down
+        return 2 # down
     elif dr == 0 and dc == -1:
-        return 2 # left
+        return 1 # left
     elif dr == 0 and dc == 1:
         return 3 # right
     else:
@@ -135,13 +136,35 @@ def createLabel(x):
     y[get_direction(path[0], path[1])] = 1
     return y
 
+def rotate(x, y):
+    x = copy.deepcopy(x)
+    y = copy.deepcopy(y)
+    x[0] = np.rot90(x[0]) # rotate the grid
+    x[1] = np.rot90(x[1]) # rotate the start
+    x[2] = np.rot90(x[2]) # rotate the goal
 
-def make_astar_dataset(N, n, m, obstacle_p=0.2):
-    X = np.empty((N, 3, n, m))
-    y = np.empty((N, 5))
+    class_index = np.argwhere(y == 1)
+    if (class_index == 4):
+        # This indicates no solution found, so we do nothing
+        return x, y
+
+    class_index = (class_index + 1) % 4
+    y = np.zeros(shape= y.shape)
+    y[class_index] = 1
+    return x, y
+
+def make_astar_dataset(N, n, m, obstacle_p=0.3, rotate_grid=True):
+    if rotate_grid:
+        N = N // 4
+    X = np.empty((N * 4, 3, n, m))
+    y = np.empty((N * 4, 5))
+
     for i in range(N):
         x = create_data_instance(n, m, obstacle_p)
         X[i] = x
         y[i] = createLabel(x)
+        if rotate_grid:
+            for k in range(3):
+                X[i + (k + 1) * N], y[i + (k + 1) * N] = rotate(X[i + k * N], y[i + k * N])
     return X, y
     
