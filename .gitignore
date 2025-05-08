@@ -4,3 +4,4 @@ notebooks/.Trash-0/*
 **/.ipynb_checkpoints/*
 __pycache__/
 **/__pycache__/
+**/cifar10_data/
