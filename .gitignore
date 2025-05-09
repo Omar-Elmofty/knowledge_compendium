@@ -1,7 +1,11 @@
 # Needed since we mount the notebooks dir as a docker volume
-notebooks/.Trash-0/*
+.Trash-0/*
+**/.Trash-0/*
 .ipynb_checkpoints/*
 **/.ipynb_checkpoints/*
 __pycache__/
 **/__pycache__/
 **/cifar10_data/
+**/fashionmnist_data/
+**/models/
+**/runs/
