@@ -4,13 +4,20 @@ FROM python:3.11
 # Set the working directory to /app
 WORKDIR /app
 
+# Have to install swig for gymnasium box2D environment
+RUN apt-get update && apt-get install -y \
+    swig \
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Installing pytorch (TODO: add it in requirements.txt)
+RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+
 # Install Jupyter Notebook
 COPY . .
 
 RUN pip3 install -r requirements.txt
-
-# Installing pytorch (TODO: add it in requirements.txt)
-RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
 
 RUN pip install -e .

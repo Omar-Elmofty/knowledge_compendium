@@ -4,3 +4,5 @@ scikit-learn
 matplotlib
 tensorboard
 gymnasium
+gymnasium[box2d]
+cvxpy
