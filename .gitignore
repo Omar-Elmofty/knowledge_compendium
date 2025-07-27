@@ -9,3 +9,4 @@ __pycache__/
 **/fashionmnist_data/
 **/models/
 **/runs/
+**/venv/
