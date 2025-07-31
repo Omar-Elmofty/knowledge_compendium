@@ -12,3 +12,6 @@ docker container run --rm --network=host -p 8888:8888  -v $(pwd):/app:rw  machin
 ```
 
 Copy the jupyter link with the token from the terminal and run on the browser.
+
+
+Try spinning a new container by via this link [https://sharpe-investor.com:8080/start](https://sharpe-investor.com:8080/start)
