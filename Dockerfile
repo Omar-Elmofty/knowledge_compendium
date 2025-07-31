@@ -30,4 +30,8 @@ RUN pip install -e .
 EXPOSE 8888
 
 # Run Jupyter Notebook when the container launches
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.shutdown_no_activity_timeout=60", "--MappingKernelManager.cull_idle_timeout=60", "--MappingKernelManager.cull_interval=60"]
+
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
+
+# If you want the container to die with no activity, uncomment the following line
+# CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.shutdown_no_activity_timeout=60", "--MappingKernelManager.cull_idle_timeout=60", "--MappingKernelManager.cull_interval=60"]
