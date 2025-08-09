@@ -3,15 +3,13 @@
 
 Building the container (the `--network=host` is for working with vpn):
 ```
-docker image build --network=host -t machine_learning_notes .
+docker image build --network=host -t jupyter_notebooks .
 ```
 
 Running the container:
 ```
-    docker container run --rm --network=host -p 8888:8888  -v $(pwd):/app:rw  machine_learning_notes
+docker container run --rm --network=host -p 8888:8888  -v $(pwd):/app:rw  jupyter_notebooks
 ```
 
-Copy the jupyter link with the token from the terminal and run on the browser.
+Open [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree) on your browser to interact with the notebook.
 
-
-Try spinning a new container by via this link [https://sharpe-investor.com:8080/start](https://sharpe-investor.com:8080/start)
