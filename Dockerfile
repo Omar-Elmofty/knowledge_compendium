@@ -1,15 +1,24 @@
 # Use an official Python runtime as a parent image
 FROM python:3.11
 
-# Set the working directory to /app
-WORKDIR /app
 
 # Have to install swig for gymnasium box2D environment
 RUN apt-get update && apt-get install -y \
     swig \
     nano \
+    curl \
+    libasound2 \
+    xvfb \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep 'drawio-amd64.*\.deb' | cut -d '"' -f 4 | wget -i -
+
+RUN apt-get update && apt-get install -y -f \
+    ./drawio-amd64-*.deb \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set the working directory to /app
+WORKDIR /app
 
 # Installing pytorch (TODO: add it in requirements.txt)
 RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
@@ -17,7 +26,6 @@ RUN pip3 install torch torchvision torchaudio --index-url https://download.pytor
 
 # Install Jupyter Notebook
 COPY ./datasets ./datasets
-COPY ./notebooks ./notebooks
 COPY ./pyproject.toml ./pyproject.toml
 COPY ./requirements.txt ./requirements.txt
 
@@ -26,12 +34,11 @@ RUN pip3 install -r requirements.txt
 
 RUN pip install -e .
 
-# Make port 8888 available to the world outside this container
 EXPOSE 8888
+EXPOSE 8080
 
-# Run Jupyter Notebook when the container launches
+COPY ./playground ./playground
+COPY ./knowledge_compendium ./knowledge_compendium
+COPY ./entrypoint.sh ./entrypoint.sh
 
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
-
-# If you want the container to die with no activity, uncomment the following line
-# CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.shutdown_no_activity_timeout=60", "--MappingKernelManager.cull_idle_timeout=60", "--MappingKernelManager.cull_interval=60"]
+CMD ["./entrypoint.sh" ]

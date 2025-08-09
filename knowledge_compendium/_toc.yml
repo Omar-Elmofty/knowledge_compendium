@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: reinforcement_learning/intro
+  sections:
+  - file: reinforcement_learning/reinforcement_learning_basics
+  - file: reinforcement_learning/markov_decision_processes
+

@@ -1,4 +1,5 @@
 jupyter
+jupyter-book
 pandas
 scikit-learn
 matplotlib
