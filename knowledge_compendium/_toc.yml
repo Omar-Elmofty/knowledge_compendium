@@ -4,8 +4,15 @@
 format: jb-book
 root: intro
 chapters:
-- file: reinforcement_learning/intro
-  sections:
-  - file: reinforcement_learning/reinforcement_learning_basics
-  - file: reinforcement_learning/markov_decision_processes
+# - file: reinforcement_learning/intro
+#   sections:
+#   - file: reinforcement_learning/reinforcement_learning_basics
+#   - file: reinforcement_learning/markov_decision_processes
 
+- file: control_barrier_functions/intro
+  sections:
+  - file: control_barrier_functions/lyapunov_theory
+  - file: control_barrier_functions/nagumos_invariance_principle
+  - file: control_barrier_functions/control_lyapunov_functions
+  - file: control_barrier_functions/control_barrier_functions
+  - file: control_barrier_functions/clf_cbf_qp_controller

@@ -1,8 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Omar Elmofty's Notes
+title: Knowledge Compendium
 author: Omar Elmofty
+copyright: 2025
 # logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -16,12 +17,12 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+# bibtex_bibfiles:
+#   - references.bib
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Omar-Elmofty/jupyter_notebooks.git  # Online location of your book
+  url: https://github.com/Omar-Elmofty/knowledge_compendium  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 

@@ -1,6 +1,7 @@
-# Welcome to Omar's Notes
+# Knowledge Compendium
 
-This is a compilation of my notes over my learning journey in robotics and machine learning, checkout the below table of contents for sections of my notes:
+
+Hello, I’m [Omar Elmofty](omarelmofty.com). This is a compendium (a curated collection) of my notes from my ongoing journey in robotics and machine learning.
+
 ```{tableofcontents}
 ```
-![image](diagrams/exported/test.png)
