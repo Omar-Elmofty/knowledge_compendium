@@ -9,10 +9,21 @@ chapters:
 #   - file: reinforcement_learning/reinforcement_learning_basics
 #   - file: reinforcement_learning/markov_decision_processes
 
-- file: control_barrier_functions/intro
-  sections:
-  - file: control_barrier_functions/lyapunov_theory
-  - file: control_barrier_functions/nagumos_invariance_principle
-  - file: control_barrier_functions/control_lyapunov_functions
-  - file: control_barrier_functions/control_barrier_functions
-  - file: control_barrier_functions/clf_cbf_qp_controller
+  - file: control_barrier_functions/intro
+    sections:
+    - file: control_barrier_functions/lyapunov_theory
+    - file: control_barrier_functions/nagumos_invariance_principle
+    - file: control_barrier_functions/control_lyapunov_functions
+    - file: control_barrier_functions/control_barrier_functions
+    - file: control_barrier_functions/clf_cbf_qp_controller
+    - file: control_barrier_functions/CLF-QP_controller_example
+    - file: control_barrier_functions/CLF-CBF-QP-controller_example
+
+  - file: model_predictive_control/intro
+    sections:
+    - file: model_predictive_control/linear_quadratic_regulator
+
+  - file: mathematical_concepts/intro
+    sections:
+    - file: mathematical_concepts/fourier_and_laplace_transforms
+  

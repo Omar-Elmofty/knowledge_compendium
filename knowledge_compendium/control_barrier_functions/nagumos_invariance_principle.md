@@ -28,6 +28,6 @@ What the above conditions enforce is that the trajectory of the system is free t
 
 This means that the set $C$ is an invariant set, meaning that the trajectory of the system will remain inside of $C$ as the system will evolve over time.
 
-Note that the difference between $h(x)$ here and $V(x) in [Lyapunov Stability Theorem](lyapunov_theory.md) is that $V(x)$ had an invariant set at every sublevel, however, $h(x)$ only has an invariant set at the sublevel at $h(x) = 0$. $V(x)$ enforces a stricter requirement at the system to guarantee stability to an equilibrium point, while $h(x)$ is not concerned with keeping the system trajectory within a safe set and not enforcing any stability requirements over the system.
+Note that the difference between $h(x)$ here and $V(x)$ in [Lyapunov Stability Theorem](lyapunov_theory.md) is that $V(x)$ had an invariant set at every sublevel, however, $h(x)$ only has an invariant set at the sublevel at $h(x) = 0$. $V(x)$ enforces a stricter requirement at the system to guarantee stability to an equilibrium point, while $h(x)$ is not concerned with keeping the system trajectory within a safe set and not enforcing any stability requirements over the system.
 
 Again similar to $V(x)$ we just need to find one $h(x)$ that works for the system and enforces the above requirements no matter how complicated the dynamics of the system are. If we find $h(x)$ that satisfies the above requirements then we could prove that the system is stable.

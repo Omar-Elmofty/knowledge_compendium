@@ -15,8 +15,12 @@ fi
 rm -rf knowledge_compendium/diagrams/exported/*
 
 # Export all diagrams from knowledge_compendium/diagrams to SVG format
-xvfb-run /opt/drawio/drawio --no-sandbox --export knowledge_compendium/diagrams/  --format png --output knowledge_compendium/diagrams/exported --disable-gpu
+xvfb-run /opt/drawio/drawio --no-sandbox --export knowledge_compendium/diagrams/  --format png --output knowledge_compendium/diagrams/exported --disable-gpu --scale 2
 
+# clean build
+rm -rf  knowledge_compendium/_build/
+rm -rf  knowledge_compendium/.ipynb_checkpoints/
+ 
 
 # Build the compendium
 jupyter-book build knowledge_compendium
