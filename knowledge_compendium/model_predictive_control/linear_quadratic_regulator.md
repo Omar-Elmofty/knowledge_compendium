@@ -55,5 +55,7 @@ de®nite. These assumptions guarantee that the solution to the optimal
 control problem exists and is unique.
 
 
-## Infinite Horizon LQ control
+## Infinite Horizon LQ control (Linear Quadratic Regulator)
+
+
 

@@ -6,3 +6,4 @@ matplotlib
 tensorboard
 gymnasium
 cvxpy
+yfinance
