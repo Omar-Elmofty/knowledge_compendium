@@ -9,3 +9,5 @@
 **/venv/
 **/_build/
 **/exported/
+**/render.svg
+**/renders/

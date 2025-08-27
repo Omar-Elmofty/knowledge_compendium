@@ -19,5 +19,5 @@ docker image build --network=host -t knowledge_compendium .
 
 Then running the docker container:
 ```
-docker container run --rm --network=host -v $(pwd):/app:rw  knowledge_compendium
+docker container run --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium
 ```

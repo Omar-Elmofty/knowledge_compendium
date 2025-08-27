@@ -41,4 +41,16 @@ COPY ./playground ./playground
 COPY ./knowledge_compendium ./knowledge_compendium
 COPY ./entrypoint.sh ./entrypoint.sh
 
+
+# Clone the pypibt repository
+RUN git clone https://github.com/Kei18/pypibt.git
+
+# Build and install pypibt
+WORKDIR /app/pypibt
+RUN pip install -e .
+
+# Set default working directory
+WORKDIR /app
+
+
 CMD ["./entrypoint.sh" ]

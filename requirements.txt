@@ -7,3 +7,5 @@ tensorboard
 gymnasium
 cvxpy
 yfinance
+pogema
+pogema-toolbox
