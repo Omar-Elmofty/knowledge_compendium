@@ -14,16 +14,20 @@ chapters:
     - file: control_barrier_functions/lyapunov_theory
     - file: control_barrier_functions/nagumos_invariance_principle
     - file: control_barrier_functions/control_lyapunov_functions
-    - file: control_barrier_functions/control_barrier_functions
-    - file: control_barrier_functions/clf_cbf_qp_controller
     - file: control_barrier_functions/CLF-QP_controller_example
+    - file: control_barrier_functions/control_barrier_functions
     - file: control_barrier_functions/CLF-CBF-QP-controller_example
-
+    - file: control_barrier_functions/diff_drive_CLF-CBF-controller
+    
   - file: model_predictive_control/intro
     sections:
-    - file: model_predictive_control/linear_quadratic_regulator
+    - file: model_predictive_control/MPC-CBF-diff-drive
+
+  - file: mapf/intro
+    sections:
+    - file: mapf/prioritized_planning
+    - file: mapf/popular_prioritized_planning_algorithms
 
   - file: mathematical_concepts/intro
     sections:
     - file: mathematical_concepts/fourier_and_laplace_transforms
-  

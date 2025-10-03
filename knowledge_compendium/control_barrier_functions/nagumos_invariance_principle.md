@@ -3,22 +3,27 @@
 Nagumo's Invariance principle is very similar to [Lyapunov Stability Theorem](lyapunov_theory.md) but with a subtle difference. While Lyapunov Theory was concerned with the stability of the system around an equilibrium point, Nagumo's Invariance principle is concerned with the system trajectory being bounded by a specific set.
 
 Again given that you have a system where:
+
 $$
 \dot{x} = f(x)
 $$
 
 Let's consider a function $h(x)$, where the set $C$ is defined as:
+
 $$
 C = {x | h(x) \geq 0}
 $$
 
 The set $C$ forms the boundary of the safe set that we're concerned with. If $h(x)$ satisfies the following condition:
+
 $$
 \dot{h}(x) \geq 0
 $$
+
 $$
 \forall x \in \partial{C}
 $$
+
 Where $\partial{C}$ is the boundary of the set $C$.
 
 See the below diagram for more illustration.

@@ -8,23 +8,26 @@ We now will introduce control into our system, so our system can be formulated a
 $$
 \dot{x} = f(x, u)
 $$
+
 Where $u$ is the control input.
-In this context, we will treat $x$ and $u$ as 2 independent variables since we don't have a controller designed yet, and we will be trying to build a controller that regulates $u$ (we don't have that controller yet).
+In this context, we will treat $x$ and $u$ as 2 independent variables since we don't have a controller designed yet, and we will be trying to build a controller that regulates $u$ such that our system is stable.
 
 So Let's start by defining the Lyapunov function after we've introduced the new system with the control $u$ introduced:
+
 $$
 Lyapunov\ function: V(x)
 $$
+
 Where:
+
 $$
 V(x_e) = 0, V(x) > 0\ \forall x \neq x_e
 $$
+
 $$
 \dot{V}(x, u) < 0\ \forall x \neq x_e
 $$
 
 ![test](../diagrams/exported/control_lyapunov_function.png)
 
-Hence, if we could pick a controller that will regulate $u$ such that the condition $\dot{V}(x, u) < 0$ is satisfied, then we have designed a controller that stabilizes the system. This will be the goal of the following section.
-
-
+Hence, if we could pick a controller that will regulate $u$ such that the condition $\dot{V}(x, u) < 0$ is satisfied, then we have designed a controller that stabilizes the system. This will be the goal of the following sections. In the following sections we will design a QP controller that utilizes the control Lyapunov function to make the system stable.

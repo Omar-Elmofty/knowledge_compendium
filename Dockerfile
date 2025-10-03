@@ -32,16 +32,6 @@ COPY ./requirements.txt ./requirements.txt
 RUN pip3 install -r requirements.txt
 
 
-RUN pip install -e .
-
-EXPOSE 8888
-EXPOSE 8080
-
-COPY ./playground ./playground
-COPY ./knowledge_compendium ./knowledge_compendium
-COPY ./entrypoint.sh ./entrypoint.sh
-
-
 # Clone the pypibt repository
 RUN git clone https://github.com/Kei18/pypibt.git
 
@@ -49,8 +39,16 @@ RUN git clone https://github.com/Kei18/pypibt.git
 WORKDIR /app/pypibt
 RUN pip install -e .
 
-# Set default working directory
 WORKDIR /app
+
+# Set default working directory
+
+EXPOSE 8888
+EXPOSE 8080
+
+COPY ./playground ./playground
+COPY ./knowledge_compendium ./knowledge_compendium
+COPY ./entrypoint.sh ./entrypoint.sh
 
 
 CMD ["./entrypoint.sh" ]
