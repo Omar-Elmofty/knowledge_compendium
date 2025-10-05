@@ -3,10 +3,7 @@
 Resources:
 [Attention is all you need](https://arxiv.org/abs/1706.03762): The original paper about Attention ..etc.
 [3blue1brown series about DL](https://www.youtube.com/watch?v=LPZh9BOjkQs&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=5)
-
-
-
-
+[Andrej Karpathy DL lectures](https://karpathy.ai/zero-to-hero.html)
 
 
 What is the GPT in the most famous chatGPT:
