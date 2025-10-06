@@ -6,7 +6,6 @@ Notes for the following lecture:
 - [Lecture Slides](https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/intro_rl.pdf)
 
 
-
 ## What is reinforcement learning?
 It is the process by which an agent learns to maximize reward in a given environment.
 Reinforcement learning deals with problems that involves sequential decisions by an agent, where after every decision taken the agent gets a specific reward.
@@ -21,9 +20,7 @@ Reinforcement learning deals with problems that involves sequential decisions by
 
 The agent environment interaction:
 
-<div align="center">
-    <img src="attachment:c47f4bf2-d460-44fa-9d7f-eb6e17869c3f.png" width="500"/>
-</div>
+![image](attachment:c47f4bf2-d460-44fa-9d7f-eb6e17869c3f.png)
 
 ### Reward 
 

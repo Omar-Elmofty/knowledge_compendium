@@ -4,11 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-# - file: reinforcement_learning/intro
-#   sections:
-#   - file: reinforcement_learning/reinforcement_learning_basics
-#   - file: reinforcement_learning/markov_decision_processes
-
   - file: control_barrier_functions/intro
     sections:
     - file: control_barrier_functions/lyapunov_theory
@@ -27,6 +22,14 @@ chapters:
     sections:
     - file: mapf/prioritized_planning
     - file: mapf/popular_prioritized_planning_algorithms
+
+  - file: machine_learning/intro
+    sections:
+    - file: machine_learning/attention_explained
+
+  - file: reinforcement_learning/intro
+    sections:
+    - file: reinforcement_learning/reinforcement_learning_basics
 
   - file: mathematical_concepts/intro
     sections:

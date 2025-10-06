@@ -32,6 +32,7 @@ $$
 Ok let's break this down in very simple terms.
 
 
+![attention](../diagrams/exported/attention.png)
 
 ## Self vs. Cross Attention
 
