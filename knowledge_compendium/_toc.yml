@@ -30,6 +30,7 @@ chapters:
   - file: reinforcement_learning/intro
     sections:
     - file: reinforcement_learning/reinforcement_learning_basics
+    - file: reinforcement_learning/markov_decision_processes
 
   - file: mathematical_concepts/intro
     sections:
