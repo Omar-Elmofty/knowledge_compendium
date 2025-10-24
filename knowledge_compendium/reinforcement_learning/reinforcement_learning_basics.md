@@ -20,7 +20,7 @@ Reinforcement learning deals with problems that involves sequential decisions by
 
 The agent environment interaction:
 
-![image](attachment:c47f4bf2-d460-44fa-9d7f-eb6e17869c3f.png)
+![image](../images/rl_model.png)
 
 ### Reward 
 

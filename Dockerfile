@@ -11,12 +11,17 @@ RUN apt-get update && apt-get install -y \
     xvfb \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest | grep browser_download_url | grep 'drawio-amd64.*\.deb' | cut -d '"' -f 4 | wget -i -
+RUN  wget  https://github.com/jgraph/drawio-desktop/releases/download/v28.2.5/drawio-amd64-28.2.5.deb
 
 RUN apt-get update && apt-get install -y -f \
-    ./drawio-amd64-*.deb \
+    ./drawio-amd64-28.2.5.deb \
     && rm -rf /var/lib/apt/lists/*
 
+
+# Install RUST
+RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+#
 # Set the working directory to /app
 WORKDIR /app
 
@@ -31,6 +36,9 @@ COPY ./requirements.txt ./requirements.txt
 
 RUN pip3 install -r requirements.txt
 
+# Install evcxr_jupyter
+RUN . $HOME/.cargo/env && cargo install evcxr_jupyter
+RUN . $HOME/.cargo/env && evcxr_jupyter --install
 
 # Clone the pypibt repository
 RUN git clone https://github.com/Kei18/pypibt.git

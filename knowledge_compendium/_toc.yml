@@ -13,10 +13,18 @@ chapters:
     - file: control_barrier_functions/control_barrier_functions
     - file: control_barrier_functions/CLF-CBF-QP-controller_example
     - file: control_barrier_functions/diff_drive_CLF-CBF-controller
-    
+
+  - file: controls/pid_theory
+    sections:
+    - file: controls/pid
+
   - file: model_predictive_control/intro
     sections:
     - file: model_predictive_control/MPC-CBF-diff-drive
+
+  - file: motion_planning/intro
+    sections:
+    - file: motion_planning/popular_papers
 
   - file: mapf/intro
     sections:
@@ -35,3 +43,5 @@ chapters:
   - file: mathematical_concepts/intro
     sections:
     - file: mathematical_concepts/fourier_and_laplace_transforms
+    - file: mathematical_concepts/comlexity_classes
+
