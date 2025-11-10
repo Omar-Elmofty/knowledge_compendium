@@ -3,7 +3,7 @@
 
 title: Knowledge Compendium
 author: Omar Elmofty
-copyright: 2025
+copyright: "2025"
 # logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -23,7 +23,7 @@ latex:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/Omar-Elmofty/knowledge_compendium  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
+  path_to_book: knowledge_compendium  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -31,3 +31,6 @@ repository:
 html:
   use_issues_button: false
   use_repository_button: true
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"

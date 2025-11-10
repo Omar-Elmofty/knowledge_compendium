@@ -4,6 +4,10 @@
 format: jb-book
 root: intro
 chapters:
+  - file: algorithms_and_datastructures/intro
+    sections:
+    - file: algorithms_and_datastructures/algorithms_illumintated_p1
+
   - file: control_barrier_functions/intro
     sections:
     - file: control_barrier_functions/lyapunov_theory
