@@ -54,9 +54,6 @@ WORKDIR /app
 EXPOSE 8888
 EXPOSE 8080
 
-COPY ./playground ./playground
-COPY ./knowledge_compendium ./knowledge_compendium
 COPY ./entrypoint.sh ./entrypoint.sh
 
-
-CMD ["./entrypoint.sh" ]
+ENTRYPOINT ["./entrypoint.sh" ]

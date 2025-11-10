@@ -1,11 +1,28 @@
 #!/bin/bash
 
+usage() {
+    echo "Usage: $0 [--jupyter --build-compendium --serve-compendium]"
+    exit 1
+}
 
-# Run jupyter notebook on port 8888
-jupyter notebook --ip=127.0.0.1 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' & 
+# Check if at least one argument was provided
+if [ -z "$1" ]; then
+  usage
+fi
+
+if [ "$1" != "--jupyter" ] && [ "$1" != "--build-compendium" ] && [ "$1" != "--serve-compendium" ]; then
+    usage
+fi
+
+if [ "$1" == "--jupyter" ]; then
+    jupyter notebook --ip=127.0.0.1 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    exit 0
+fi
+
+python3 -m nodeenv -v --node=22.17.0 --prebuilt --clean-src
+
 
 # Compile all the draw.io diagrams to SVG
-
 # Check if knowledge_compendium/diagrams/exported directory exists, if not create it
 if [ ! -d "knowledge_compendium/diagrams/exported" ]; then
     mkdir -p knowledge_compendium/diagrams/exported
@@ -20,15 +37,11 @@ xvfb-run /opt/drawio/drawio --no-sandbox --export knowledge_compendium/diagrams/
 # clean build
 rm -rf  knowledge_compendium/_build/
 rm -rf  knowledge_compendium/.ipynb_checkpoints/
- 
 
 # Build the compendium
 jupyter-book build knowledge_compendium
 
-# Serve the compendium on port 8080
-python3 -m http.server 8080 --directory knowledge_compendium/_build/html --bind 127.0.0.1
-
-
-
-# If you want the container to die with no activity, uncomment the following line
-# CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''", "--NotebookApp.shutdown_no_activity_timeout=60", "--MappingKernelManager.cull_idle_timeout=60", "--MappingKernelManager.cull_interval=60"]
+if [ "$1" == "--serve-compendium" ]; then
+    # Serve the compendium on port 8080
+    python3 -m http.server 8080 --directory knowledge_compendium/_build/html --bind 127.0.0.1
+fi
