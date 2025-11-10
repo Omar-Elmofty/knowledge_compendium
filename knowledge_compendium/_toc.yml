@@ -26,7 +26,6 @@ chapters:
   - file: machine_learning/intro
     sections:
     - file: machine_learning/attention_explained
-    - file: machine_learning/attention_is_all_you_need
     - file: machine_learning/reinforcement_learning/intro
       sections:
       - file: machine_learning/reinforcement_learning/reinforcement_learning_basics
