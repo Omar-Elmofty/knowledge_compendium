@@ -1,4 +1,4 @@
-# Machine Learning Topics / Algorithms
+# Machine Learning
 
 Discuss machine learning topics / algorithms.
 

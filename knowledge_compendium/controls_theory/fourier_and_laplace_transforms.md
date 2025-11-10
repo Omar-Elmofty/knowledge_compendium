@@ -1,8 +1,8 @@
 # Fourier & Laplace Transforms
 
-See below video that gives an intuitive explanation fo the Fourier and Laplace Transforms.
+See below video that gives an intuitive explanation of the Fourier and Laplace Transforms.
 
-Credit for the information in this page if from the following youtube video.
+Credit for the information on this page is from the following YouTube video.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n2y7n6jw5d0?si=dH-vA0cHOymAKpyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 

@@ -1,5 +1,0 @@
-# Model Predictive Control
-
-```{tableofcontents}
-```
-

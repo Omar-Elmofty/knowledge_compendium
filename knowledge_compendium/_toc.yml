@@ -4,48 +4,40 @@
 format: jb-book
 root: intro
 chapters:
-  - file: algorithms_and_datastructures/intro
+  # - file: algorithms_and_datastructures/intro
+  #   sections:
+  #   - file: algorithms_and_datastructures/algorithms_illumintated_p1
+  
+  - file: controls_theory/intro
     sections:
-    - file: algorithms_and_datastructures/algorithms_illumintated_p1
+    - file: controls_theory/fourier_and_laplace_transforms
+    - file: controls_theory/pid_theory
+    - file: controls_theory/control_barrier_functions/intro
+      sections:
+      - file: controls_theory/control_barrier_functions/lyapunov_theory
+      - file: controls_theory/control_barrier_functions/nagumos_invariance_principle
+      - file: controls_theory/control_barrier_functions/control_lyapunov_functions
+      - file: controls_theory/control_barrier_functions/CLF-QP_controller_example
+      - file: controls_theory/control_barrier_functions/control_barrier_functions
+      - file: controls_theory/control_barrier_functions/CLF-CBF-QP-controller_example
+      # - file: controls_theory/control_barrier_functions/diff_drive_CLF-CBF-controller
+    - file: controls_theory/MPC-CBF-diff-drive
 
-  - file: control_barrier_functions/intro
+  - file: machine_learning/intro
     sections:
-    - file: control_barrier_functions/lyapunov_theory
-    - file: control_barrier_functions/nagumos_invariance_principle
-    - file: control_barrier_functions/control_lyapunov_functions
-    - file: control_barrier_functions/CLF-QP_controller_example
-    - file: control_barrier_functions/control_barrier_functions
-    - file: control_barrier_functions/CLF-CBF-QP-controller_example
-    - file: control_barrier_functions/diff_drive_CLF-CBF-controller
-
-  - file: controls/pid_theory
-    sections:
-    - file: controls/pid
-
-  - file: model_predictive_control/intro
-    sections:
-    - file: model_predictive_control/MPC-CBF-diff-drive
-
-  - file: motion_planning/intro
-    sections:
-    - file: motion_planning/popular_papers
+    - file: machine_learning/attention_explained
+    - file: machine_learning/attention_is_all_you_need
+    - file: machine_learning/reinforcement_learning/intro
+      sections:
+      - file: machine_learning/reinforcement_learning/reinforcement_learning_basics
+      - file: machine_learning/reinforcement_learning/markov_decision_processes
+      - file: machine_learning/reinforcement_learning/model_free_prediction
 
   - file: mapf/intro
     sections:
     - file: mapf/prioritized_planning
     - file: mapf/popular_prioritized_planning_algorithms
 
-  - file: machine_learning/intro
-    sections:
-    - file: machine_learning/attention_explained
-
-  - file: reinforcement_learning/intro
-    sections:
-    - file: reinforcement_learning/reinforcement_learning_basics
-    - file: reinforcement_learning/markov_decision_processes
-
-  - file: mathematical_concepts/intro
-    sections:
-    - file: mathematical_concepts/fourier_and_laplace_transforms
-    - file: mathematical_concepts/comlexity_classes
-
+  # - file: motion_planning/intro
+  #   sections:
+  #   - file: motion_planning/popular_papers

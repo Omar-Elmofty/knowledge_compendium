@@ -1,8 +1,8 @@
-# Papers for Waabi and uber ATG
+# Papers for Waabi and Uber ATG
 
 ## QuAD: Query-based Interpretable Neural Motion Planning for Autonomous Driving
 
-Link to paper https://arxiv.org/pdf/2404.01486?
+Link to paper: https://arxiv.org/pdf/2404.01486?
 
 The premise of the paper is breaking the typical paradigm of perception -> prediction -> planning, where information about the uncertainty between 
 
@@ -16,12 +16,7 @@ If this idea scales well to real-world, dense, highly interactive driving scenar
 
 If you like, I can dig into the experimental results, ablation studies, or possible extensions. Do you want me to do that?
 
-
-
-
-
-These are are the cost factors: safety, comfort, and progress.
-
+These are the cost factors: safety, comfort, and progress.
 
 https://openaccess.thecvf.com/content_CVPR_2019/papers/Zeng_End-To-End_Interpretable_Neural_Motion_Planner_CVPR_2019_paper.pdf
 
