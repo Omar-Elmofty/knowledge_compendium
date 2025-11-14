@@ -1,7 +1,7 @@
 #!/bin/bash
 
 usage() {
-    echo "Usage: $0 [--jupyter --build-compendium --serve-compendium]"
+    echo "Usage: $0 [--jupyter --build-compendium --serve-compendium --export-diagrams]"
     exit 1
 }
 
@@ -10,7 +10,7 @@ if [ -z "$1" ]; then
   usage
 fi
 
-if [ "$1" != "--jupyter" ] && [ "$1" != "--build-compendium" ] && [ "$1" != "--serve-compendium" ]; then
+if [ "$1" != "--jupyter" ] && [ "$1" != "--build-compendium" ] && [ "$1" != "--serve-compendium" ] && [ "$1" != "--export-diagrams" ]; then
     usage
 fi
 
@@ -33,6 +33,10 @@ rm -rf knowledge_compendium/diagrams/exported/*
 
 # Export all diagrams from knowledge_compendium/diagrams to SVG format
 xvfb-run /opt/drawio/drawio --no-sandbox --export knowledge_compendium/diagrams/  --format png --output knowledge_compendium/diagrams/exported --disable-gpu --scale 2
+
+if [ "$1" == "--export-diagrams" ]; then
+    exit 0
+fi
 
 # clean build
 rm -rf  knowledge_compendium/_build/

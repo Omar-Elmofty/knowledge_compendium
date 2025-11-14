@@ -31,6 +31,7 @@ chapters:
       - file: machine_learning/reinforcement_learning/reinforcement_learning_basics
       - file: machine_learning/reinforcement_learning/markov_decision_processes
       - file: machine_learning/reinforcement_learning/model_free_prediction
+      - file: machine_learning/reinforcement_learning/model_free_control
 
   - file: mapf/intro
     sections:
