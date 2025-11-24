@@ -5,7 +5,9 @@ scikit-learn
 matplotlib
 tensorboard
 gymnasium
+gymnasium[classic-control]
 cvxpy
 yfinance
 pogema
 pogema-toolbox
+imageio
