@@ -18,11 +18,11 @@ docker image build --network=host -t knowledge_compendium .
 Then run the Docker container:
 ```
 # For launching the Jupyter book (served on http://127.0.0.1:8888)
-docker container run -it --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium --jupyter
+docker run -it --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium --jupyter
 
 # For building the Jupyter book
-docker container run -it --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium --build-compendium
+docker run -it --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium --build-compendium
 
 # For building and serving the Jupyter book on http://127.0.0.1:8080
-docker container run -it --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium --serve-compendium
+docker run -it --rm --network=host -v $(pwd):/app:rw --name kc_container knowledge_compendium --serve-compendium
 ```
