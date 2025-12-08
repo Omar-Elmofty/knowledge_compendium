@@ -1,4 +1,5 @@
 # Use an official Python runtime as a parent image
+ARG DRAWIO_ARCH=amd64
 FROM python:3.11
 
 
@@ -11,12 +12,16 @@ RUN apt-get update && apt-get install -y \
     xvfb \
     && rm -rf /var/lib/apt/lists/*
 
-RUN  wget  https://github.com/jgraph/drawio-desktop/releases/download/v28.2.5/drawio-amd64-28.2.5.deb
+ARG DRAWIO_ARCH
+RUN  wget  https://github.com/jgraph/drawio-desktop/releases/download/v28.2.5/drawio-${DRAWIO_ARCH}-28.2.5.deb
 
-RUN apt-get update && apt-get install -y -f \
-    ./drawio-amd64-28.2.5.deb \
+# Ensures we start with a clean state for installation on mc
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* \
+    && apt-get update --fix-missing
+
+RUN apt-get install -y -f \
+    ./drawio-${DRAWIO_ARCH}-28.2.5.deb \
     && rm -rf /var/lib/apt/lists/*
-
 
 # Install RUST
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y

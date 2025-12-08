@@ -15,7 +15,7 @@ if [ "$1" != "--jupyter" ] && [ "$1" != "--build-compendium" ] && [ "$1" != "--s
 fi
 
 if [ "$1" == "--jupyter" ]; then
-    jupyter notebook --ip=127.0.0.1 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+    jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
     exit 0
 fi
 
@@ -47,5 +47,5 @@ jupyter-book build knowledge_compendium
 
 if [ "$1" == "--serve-compendium" ]; then
     # Serve the compendium on port 8080
-    python3 -m http.server 8080 --directory knowledge_compendium/_build/html --bind 127.0.0.1
+    python3 -m http.server 8888 --directory knowledge_compendium/_build/html --bind 0.0.0.0
 fi
