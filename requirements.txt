@@ -11,3 +11,6 @@ yfinance
 pogema
 pogema-toolbox
 imageio
+mypy
+black
+imageio[ffmpeg]
